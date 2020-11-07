@@ -1,0 +1,60 @@
+
+ ======================
+  LCTuple release notes
+ ======================
+
+
+ --------
+| v01-06 |
+ --------
+
+F.Gaede
+	- made compatible with c++11
+	- removed -ansi -pedantic -Wno-long-long
+
+S.Lu
+	- Added root headers and declared the parameters to fix the error: use of undeclared identifier 'MyLCTuple' in ROOT 6.06/02.
+
+
+ --------
+| v01-05 |
+ --------
+
+F.Gaede
+ - protect against missing collections in CreateRecoRelations.cc
+
+S.Lu
+ -  Implement CalorimeterHitBranches into LCTuple.
+
+A.Ebrahimi
+ - Added covariance matrix histograms to jet branches
+
+J.List
+ - added lctuple_DST.xml  to convert current DST to root
+
+
+
+ --------
+| v01-04 |
+ --------
+
+   - Added JetBranches which holds branches created from a jet collection
+     created by Satoru Jet Finder processor.
+     JetBranches has two steerable parameters which are optionally
+     set in the steering file:
+      * writeExtraParameters: if set to TRUE, the fill function
+        calculates some extra parameters using parameters provided
+        by the jet finding algorithm. Default value is FALSE.
+        See class data members for a list of extra parameters.
+      * writeTaggingParameters: if set to TRUE, the fill function
+        creates branches for jet parameters coming form flavor tagging
+        processor. If no flavor tagging processr is used, this should
+        be set to FALSE to prevent errors. Default value is FALSE.
+        See class data members for a list of extra parameters.
+   - Added isolated lepton branches
+   - Added MC particle from relation branches
+   - Added MC particle remove overlay branches
+ ----------
+| v01      |
+ ----------
+   -
