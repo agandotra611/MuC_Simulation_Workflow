@@ -17,7 +17,7 @@ Generate background events in MADGRAPH:
 2. generate mu+ mu- > vm vm~ b b~ h
 3. generate mu+ mu- > vm vm~ b b~ z
 
-The pythia and run cards are in the MG5/ directory for each process. 
+The pythia and run cards are in the MG5/ directory for each process. The crossx.html file has the cross sections for these processes. 
 
 
 # Sim plots
