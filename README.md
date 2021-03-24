@@ -3,7 +3,21 @@
 NOTE: iLCSoft environment that can run ddsim and Marlin needed. Can be generated using:
 singularity run /cvmfs/unpacked.cern.ch/registry.hub.docker.com/infnpd/mucoll-ilc-framework:1.0-centos8
 
-Gen level hepmc file for mu+ mu- > mu+ mu- h h at /afs/cern.ch/work/a/agandotr/public/3TeV_mumu_mumuhh_pythia8_events.hepmc
+# Event generation using MADGRAPH 
+
+Generate signal events in MADGRAPH software with: 
+1. generate mu+ mu- > vm vm~ h h
+2. generate mu+ mu- > mu+ mu- h h
+3. generate mu+ mu- > z h h
+4. import model sm-full
+generate mu+ mu- > h > h h
+
+Generate background events in MADGRAPH:
+1. generate mu+ mu- > vm vm~ b b~ b b~
+2. generate mu+ mu- > vm vm~ b b~ h
+3. generate mu+ mu- > vm vm~ b b~ z
+
+The pythia and run cards are in the MG5/ directory for each process. 
 
 
 # Sim plots
@@ -31,4 +45,13 @@ To verify whether the reconstruction has been completed, one can run
 
 anajob 3TeV_mumu_mumuhh_RECO.slcio
 
-which gives event by event information of the slcio file - and one should ideally see non-zero reconstructed particles in each event. 
+which gives event by event information of the slcio file - and one should ideally see non-zero reconstructed particles in each event.
+
+
+
+# Calculating invariant mass
+
+
+# Getting ratio plots 
+
+
