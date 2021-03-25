@@ -17,7 +17,7 @@ Generate background events in MADGRAPH:
 2. generate mu+ mu- > vm vm~ b b~ h
 3. generate mu+ mu- > vm vm~ b b~ z
 
-The pythia and run cards are in the MG5/ directory for each process. The crossx.html file has the cross sections for these processes. 
+The pythia and run cards are in the respective card directory for each process. The crossx.html file produced has the cross sections for these processes. 
 
 
 # Sim plots
@@ -48,10 +48,16 @@ anajob 3TeV_mumu_mumuhh_RECO.slcio
 which gives event by event information of the slcio file - and one should ideally see non-zero reconstructed particles in each event.
 
 
+Use lctuple_steer.xml to convert reconstructed plots into root files for use. 
+
 
 # Calculating invariant mass
 
+Use quadCandTree.C to add more relevant variables to tree, including calculated invariant mass. 
+
 
 # Getting ratio plots 
+
+Use ratio_plot.C to plot the invariant mass in a stack plot of the signal and three backgrounds. 
 
 
