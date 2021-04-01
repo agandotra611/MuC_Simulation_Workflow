@@ -18,7 +18,9 @@ Generate background events in MADGRAPH:
 3. generate mu+ mu- > vm vm~ b b~ z
 
 Upon generating each signal/background, store the output in a new directory and begin simulation using 
+
 output name_of_directory/
+
 launch name_of_directory/
 
 This will give a menu where pythia8 shower will be turned OFF. Enter 1 to turn on the pythia shower, and 0 to proceed. 
@@ -61,8 +63,11 @@ Use lctuple_steer.xml to convert reconstructed plots into root files for use.
 # Calculating invariant mass
 
 Use quadCandTree.C to add more relevant variables to tree, including calculated invariant mass. Use:
+
 root -l
+
 .L quadCandTree.C
+
 .x quadCandTree.C("file.root")
 
 # Getting ratio plots 
@@ -70,6 +75,7 @@ root -l
 Use ratio_plot.C to plot the invariant mass in a stack plot of the signal and three backgrounds. 
 
 root -l
+
 .L ratio_plot.C
 overlay()
 
